@@ -31,7 +31,6 @@ function getNewDeck() {
   fetch("https://deckofcardsapi.com/api/deck/new/shuffle")
     .then((res) => res.json())
     .then((data) => {
-      console.log(data);
       deckId = data.deck_id;
       remainingCard.textContent = `Remaining Cards: ${data.remaining}`;
     })
