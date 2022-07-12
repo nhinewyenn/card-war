@@ -50,6 +50,7 @@ function getNewCard() {
         const winnerText = determineCardWinner(cards[0], cards[1]);
         title.textContent = winnerText;
 
+        // Determine the main winner
         if (data.remaining === 0 && playerScore > computerScore) {
           title.textContent = "Player is the main winner! 🥳";
           disableButton();
@@ -66,6 +67,7 @@ function determineCardWinner(card1, card2) {
   card1ValueIndex = cardValue.indexOf(card1.value);
   card2ValueIndex = cardValue.indexOf(card2.value);
 
+  // Determine this round's winner
   if (card1ValueIndex > card2ValueIndex) {
     computerScore += 1;
     computer.textContent = `Computer's score: ${computerScore}`;
@@ -77,6 +79,7 @@ function determineCardWinner(card1, card2) {
   } else return "War";
 }
 
+// Call this function when there's no more card left
 function disableButton() {
   drawCard.className += " disabled";
   drawCard.disabled = true;
