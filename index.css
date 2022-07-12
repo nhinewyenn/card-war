@@ -49,6 +49,10 @@ button:hover {
   margin: 1rem auto 0 auto;
 }
 
+.disabled {
+  cursor: not-allowed;
+}
+
 /****** CARD-SECTION ******/
 .container {
   display: flex;
